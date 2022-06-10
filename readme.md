@@ -68,7 +68,6 @@ select rating, avg(imdb_score),max(imdb_score),min(imdb_score) from movies group
 
 select rating, avg(imdb_score),max(imdb_score),min(imdb_score) from movies group by rating having count(*) > 1;
 
-d
 
 
 
