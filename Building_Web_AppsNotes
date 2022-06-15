@@ -1,0 +1,69 @@
+SOLID
+	Single REsponsibility Principle (SIP)
+	
+		States that modules, classes, and methods should only have the responsibility of serving just one functionality
+		
+		Makes code:
+			Cohesive and reusable
+			
+		Classes that violate SIP are found to have high cychomatic complexity, meaning low testability
+		
+	Open-Closed Principle (OCP)
+	
+		States that classes are open for extension but closed for modification
+		meaning:
+		core classes of Spring Web MVC should consist of methods that are marked as final
+		
+	Liskov Substitution Principle (LSP) 
+	
+		Means that if a child class is derived from a parent class, the object of the parent class can be substituted
+		with an object of the child class without changing any of the properties of the parent class
+		
+		example:
+			an object of the class Rectangle can be substituted with an object class Square
+			
+	Interface Segregation Principle (ISP)
+		
+		states that the large interfaces with a large number of api definitions should be split into smaller interfaces
+		definining a set of cohesive APIs
+		
+	Dependency Inversion Principle (DIP)
+	
+		Related to the IOC principle down below vvvvv
+
+Inversion of Control (IOC)
+	also known as Dependency Injection
+	
+	"Don't call us, we'll call you"
+	
+	Dependencies are appropriately made available to the classes during runtime and classes focus exclusively
+	on delivering functionality 
+	
+	NOT  classes creating dependencies AND delivering functionality
+	
+Spring IOC Container
+	A framework that manages the life cycle of POJOs and injects them into the application as required
+	
+	How do Java objects define their dependencies?
+	
+		1. Dependencies are passed as arguments to the constructor method of the object
+		example:
+			private Shape shape;
+		
+			public DrawWithIOC(Shape shape){
+				this.shape = shape;
+			}
+		2. Dependencies are passed as arguments to the setter method of the object
+		
+		3. Dependencies are passed as arguments to a factory method of the object
+		
+	A Spring IOC container injects the dependencies AFTER it creates the beans; meaning that they are no longer
+	managed by Java objects.
+		core packages to the IOC container:
+			org.springframework.beans
+			org.springframework.context
+	JSON/XML represents Configuration Metadata
+	
+	
+	
+	
