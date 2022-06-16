@@ -64,6 +64,71 @@ Spring IOC Container
 			org.springframework.context
 	JSON/XML represents Configuration Metadata
 	
+	Spring Web MVC
+		Dispatcher servlet
+		
+			'front controller'
+			
+			determines which controller class and method needs to be called upon request
+			sends the response using the appropriate page or obejcts
+			
+		Handler Mappings
+			
+			Used to map the request URL with appropriate handlers such as controllers
+			
+			the dispatcher servelt uses handler mappings to determine the controllers which processes incoming
+			requests
+			
+			specified by use of annotations such as:
+				@RequestMapping
+				@GetMapping
+				@PostMapping
+				
+		Handler Interceptors
+		
+			Used to invoke preprocessing and post-processing logic before and after invocation of handler methods
+			
+		Controllers
+			
+			Custom controllers written by devs and used for processing requests
+			
+			uses annotations such as
+				@Controller
+				@RestController
+				
+			used to access the application behavior through one or more service interfaces
+			
+			interprets user input, passes them to a service for implementation, then transforms the service into a GUI
+	
+		Services
+		
+			Components coded by the developers
+			
+			Contains business logic
+			
+			Uses annotations such as
+				@Services
+			to identify services
+			
+		Data Access Objects (DAO) 
+		
+			Used to do data processing with the underlying data sources
+			
+			Annotated with
+				@Repository
+				
+		View Resolvers
+		
+			Components which map view names to views
+			
+			Assist in rendering models in the browser based on different view technologies
+			
+			Used by the Dispatcher servlet to invoke the appropriate view components
+			
+		Views
+			
+			Render the response data on the UI
+
 	
 	
 	
